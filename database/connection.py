@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
-from app.config.settings import settings
+from shared.config.settings import settings
 
 DATABASE_URL = (
-    f"postgresql://{settings.DB_USER}:"
+    f"mysql+pymysql://{settings.DB_USER}:"
     f"{settings.DB_PASSWORD}@"
     f"{settings.DB_HOST}:"
     f"{settings.DB_PORT}/"
@@ -11,6 +11,6 @@ DATABASE_URL = (
 
 engine = create_engine(
     DATABASE_URL,
-    echo=False,
-    pool_pre_ping=True
+    pool_pre_ping=True,
+    echo=False
 )
