@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+pydantic-settings
+python-dotenv
+openai
+httpx
+redis
+celery
+alembic
+loguru
+python-multipart
+pytest
+pytest-asyncio
+mcp
